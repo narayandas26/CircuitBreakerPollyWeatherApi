@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FailureMimicMinimalApi", "FailureMimicMinimalApi\FailureMimicMinimalApi.csproj", "{F3679699-D429-40A2-A5E3-16F64A82BAD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi", "WeatherApi\WeatherApi.csproj", "{6242AD22-58E0-4F12-A244-54C06E097805}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3679699-D429-40A2-A5E3-16F64A82BAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3679699-D429-40A2-A5E3-16F64A82BAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3679699-D429-40A2-A5E3-16F64A82BAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3679699-D429-40A2-A5E3-16F64A82BAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6242AD22-58E0-4F12-A244-54C06E097805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6242AD22-58E0-4F12-A244-54C06E097805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6242AD22-58E0-4F12-A244-54C06E097805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6242AD22-58E0-4F12-A244-54C06E097805}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4032E2C-AC41-46FC-A5D0-62180EB19647}
+	EndGlobalSection
+EndGlobal
