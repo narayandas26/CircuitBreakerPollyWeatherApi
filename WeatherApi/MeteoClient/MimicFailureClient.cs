@@ -1,4 +1,5 @@
-﻿using Polly;
+﻿using Microsoft.Net.Http.Headers;
+using Polly;
 using Polly.CircuitBreaker;
 using Polly.Extensions.Http;
 
@@ -14,9 +15,18 @@ namespace WeatherApi.MeteoClient
 
         private readonly HttpClient _httpClient;
 
-        public MimicFailureClient(IHttpClientFactory clientFactory)
+        //public MimicFailureClient(IHttpClientFactory clientFactory)
+        //{
+        //    _httpClient = clientFactory.CreateClient("MimicFailureClient");
+        //}
+
+        ////https://localhost:7299/weather?mimicfailure=0
+        public MimicFailureClient(HttpClient httpClient)
         {
-            _httpClient = clientFactory.CreateClient("MimicFailureClient");
+            _httpClient = httpClient;
+            _httpClient.BaseAddress = new Uri("https://localhost:7299/");
+            _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+            _httpClient.DefaultRequestHeaders.Add(HeaderNames.UserAgent, "MimicFailureClient");
         }
 
         public async Task<string> GetWeatherAsync(bool MimicFailure = true)

@@ -11,12 +11,7 @@ builder.Services.AddHttpClient("MeteoClient", httpClient => {
     httpClient.DefaultRequestHeaders.Add(HeaderNames.UserAgent, "NarWeatherApi");
 });
 
-//https://localhost:7299/weather?mimicfailure=0
-builder.Services.AddHttpClient("MimicFailureClient", httpClient => {
-    httpClient.BaseAddress = new Uri("https://localhost:7299/");
-    httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
-    httpClient.DefaultRequestHeaders.Add(HeaderNames.UserAgent, "NarWeatherApi");
-});
+builder.Services.AddHttpClient<IMimicFailureClient, MimicFailureClient>();
 
 builder.Services.AddScoped<IWeatherClient, MeteoWeatherClient>();
 builder.Services.AddScoped<IMimicFailureClient, MimicFailureClient>();
